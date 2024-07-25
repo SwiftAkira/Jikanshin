@@ -1,0 +1,5 @@
+vosk==0.3.32
+langid==1.1.6
+openai==0.27.2
+tkinter==0.1.0
+transformers==4.18.0

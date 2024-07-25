@@ -1,0 +1,72 @@
+# -*- mode: python ; coding: utf-8 -*-
+
+block_cipher = None
+
+a = Analysis(
+    ['jikanshin.py'],
+    pathex=['.'],
+    binaries=[],
+    datas=[
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-ar-mgb2-0.4', 'vosk_models/vosk-model-ar-mgb2-0.4'),
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-br-0.8', 'vosk_models/vosk-model-br-0.8'),
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-small-cn-0.22', 'vosk_models/vosk-model-small-cn-0.22'),
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-small-cs-0.4-rhasspy', 'vosk_models/vosk-model-small-cs-0.4-rhasspy'),
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-small-de-0.15', 'vosk_models/vosk-model-small-de-0.15'),
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-small-en-us-0.15', 'vosk_models/vosk-model-small-en-us-0.15'),
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-small-en-us-zamia-0.5', 'vosk_models/vosk-model-small-en-us-zamia-0.5'),
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-small-eo-0.42', 'vosk_models/vosk-model-small-eo-0.42'),
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-small-es-0.42', 'vosk_models/vosk-model-small-es-0.42'),
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-small-fa-0.4', 'vosk_models/vosk-model-small-fa-0.4'),
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-small-fr-0.22', 'vosk_models/vosk-model-small-fr-0.22'),
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-small-gu-0.42', 'vosk_models/vosk-model-small-gu-0.42'),
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-small-hi-0.22', 'vosk_models/vosk-model-small-hi-0.22'),
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-small-it-0.22', 'vosk_models/vosk-model-small-it-0.22'),
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-small-ja-0.22', 'vosk_models/vosk-model-small-ja-0.22'),
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-small-ko-0.22', 'vosk_models/vosk-model-small-ko-0.22'),
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-small-kz-0.15', 'vosk_models/vosk-model-small-kz-0.15'),
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-small-nl-0.22', 'vosk_models/vosk-model-small-nl-0.22'),
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-small-pl-0.22', 'vosk_models/vosk-model-small-pl-0.22'),
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-small-pt-0.3', 'vosk_models/vosk-model-small-pt-0.3'),
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-small-ru-0.22', 'vosk_models/vosk-model-small-ru-0.22'),
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-small-sv-rhasspy-0.15', 'vosk_models/vosk-model-small-sv-rhasspy-0.15'),
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-small-tg-0.22', 'vosk_models/vosk-model-small-tg-0.22'),
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-small-tr-0.3', 'vosk_models/vosk-model-small-tr-0.3'),
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-small-uk-v3-small', 'vosk_models/vosk-model-small-uk-v3-small'),
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-small-uz-0.22', 'vosk_models/vosk-model-small-uz-0.22'),
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-small-vn-0.4', 'vosk_models/vosk-model-small-vn-0.4'),
+        ('C:\\Jikanshin\\vosk_models\\vosk-model-tl-ph-generic-0.6', 'vosk_models/vosk-model-tl-ph-generic-0.6'),
+    ],
+    hiddenimports=['vosk'],
+    hookspath=[],
+    runtime_hooks=[],
+    excludes=[],
+    win_no_prefer_redirects=False,
+    win_private_assemblies=False,
+    cipher=block_cipher,
+)
+pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
+
+exe = EXE(
+    pyz,
+    a.scripts,
+    [],
+    exclude_binaries=True,
+    name='jikanshin',
+    debug=False,
+    bootloader_ignore_signals=False,
+    strip=False,
+    upx=True,
+    upx_exclude=[],
+    runtime_tmpdir=None,
+    console=True,
+)
+coll = COLLECT(
+    exe,
+    a.binaries,
+    a.zipfiles,
+    a.datas,
+    strip=False,
+    upx=True,
+    upx_exclude=[],
+    name='jikanshin',
+)
